@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{{title}}</title>
+    <!--<link rel="stylesheet" href="css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style1.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+
+<!-- ====================================================
+header section -->
+<!--<header class="top-header">-->
+<!--<header>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!--<a class="navbar-brand" href="#">Navbar</a>-->
+    <div class="col-xs-5 header-logo" style="margin-left: 5%">
+        <br>
+        <a href="index.html"><img src="img/logo.png" alt="" class="img-responsive logo"></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 20%">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html" style="background-color:#f44336;color:white;padding: 15px 25px; font-size:15px;text-align: center;display: inline-block"  >Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="medi" style="background-color:#f44336;color:white;padding: 15px 25px; font-size:15px;text-align: center;display: inline-block"  >Medicine</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="insurance" style="background-color:#f44336;color:white;padding: 15px 25px; font-size:15px;text-align: center;display: inline-block" >Insurance Service</a>
+            </li> <li class="nav-item">
+            <a class="nav-link" href="appointment" style="background-color:#f44336;color:white;padding: 15px 25px; font-size:15px;text-align: center;display: inline-block" >Online Appointment</a>
+        </li>
+
+        </ul>
+    </div>
+</nav>
+<!--</header>-->
+<section class="specialist-area section-padding">
+    <div>
+    <center><h2>Find a Doctor</h2></center>
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-md-12">
+
+                <div class="table-responsive">
+
+
+                    <table id="mytable" class="table table-bordred table-striped">
+
+                        <thead>
+
+                        <th>Doctor Id</th>
+                        <th>Doctor Name</th>
+                        <th>Speciality</th>
+                        <th>Book an Appointment</th>
+
+
+                        </thead>
+                        <tbody>
+{{#each doctor}}
+                        <tr>
+                            <td>{{this.D_id}}</td>
+                            <td>{{this.D_name}}</td>
+                            <td>{{this.Speciality}}</td>
+                            <td>  <p ><a href="/appointment_by_doc/{{this.D_id}}" class="btn btn-danger btn-sm">Book Appointment</a></p></td>
+
+                        </tr>
+{{/each}}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!--<section class="specialist-area section-padding">-->
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-lg-6 offset-lg-3">-->
+                <!--<div class="section-top text-center">-->
+
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-lg-3 col-sm-6">-->
+                <!--<div class="single-doctor mb-4 mb-lg-0">-->
+                    <!--<div class="doctor-img">-->
+                        <!--<img src="assets/images/genral.jpg" alt="" class="img-fluid">-->
+                    <!--</div>-->
+                    <!--<div class="content-area">-->
+                        <!--<div class="doctor-name text-center">-->
+                            <!--<h3>Dr. Shirley Paulson</h3>-->
+                            <!--<h6>General Physician</h6>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="text-center"> <a href="appointment_by_doc" class="template-btn mt-3">take appointment</a></div>-->
+                        <!--<br>-->
+                        <!--<br>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-sm-6">-->
+                <!--<div class="single-doctor mb-4 mb-lg-0">-->
+                    <!--<div class="doctor-img">-->
+                        <!--<img src="assets/images/skin.jpg" alt="" class="img-fluid">-->
+                    <!--</div>-->
+                    <!--<div class="content-area">-->
+                        <!--<div class="doctor-name text-center">-->
+                            <!--<h3>Dr. Nishant Nigam</h3>-->
+                            <!--<h6>Skin Specialist</h6>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="text-center"> <a href="/appointment_by_doc/1" class="template-btn mt-3">take appointment</a></div>-->
+                        <!--<br>-->
+                        <!--<br>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-sm-6">-->
+                <!--<div class="single-doctor mb-4 mb-sm-0">-->
+                    <!--<div class="doctor-img">-->
+                        <!--<img src="assets/images/ENT.jpg" alt="" class="img-fluid">-->
+                    <!--</div>-->
+                    <!--<div class="content-area">-->
+                        <!--<div class="doctor-name text-center">-->
+                            <!--<h3>Dr. Shailendra Kumar Agarwal</h3>-->
+                            <!--<h6>E.N.T Surgeon</h6>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="text-center"> <a href="appointment" class="template-btn mt-3">take appointment</a></div>-->
+                        <!--<br>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-sm-6">-->
+                <!--<div class="single-doctor">-->
+                    <!--<div class="doctor-img">-->
+                        <!--<img src="assets/images/pedicitrian.jpg" alt="" class="img-fluid">-->
+                    <!--</div>-->
+                    <!--<div class="content-area">-->
+                        <!--<div class="doctor-name text-center">-->
+                            <!--<h3>Dr. R.N. Mehrotra</h3>-->
+                            <!--<h6>Pediacritians</h6>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="text-center"> <a href="appointment" class="template-btn mt-3">take appointment</a></div>-->
+                        <!--<br>-->
+                        <!--<br>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+        <!--<div class="row">-->
+            <!--<br>-->
+            <!--<br>-->
+            <!--<br>-->
+            <!--<br>-->
+            <!--<div class="col-lg-6 offset-lg-3">-->
+
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-lg-3 col-sm-6">-->
+                <!--<div class="single-doctor mb-4 mb-lg-0">-->
+                    <!--<div class="doctor-img">-->
+                        <!--<img src="assets/images/dental.jpg" alt="" class="img-fluid">-->
+                    <!--</div>-->
+                    <!--<div class="content-area">-->
+                        <!--<div class="doctor-name text-center">-->
+                            <!--<h3>Dr. Puneet Upadhaya</h3>-->
+                            <!--<h6>Dental Surgeon</h6>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="text-center"> <a href="appointment" class="template-btn mt-3">take appointment</a></div>-->
+                        <!--<br>-->
+                        <!--<br>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-sm-6">-->
+                <!--<div class="single-doctor mb-4 mb-lg-0">-->
+                    <!--<div class="doctor-img">-->
+                        <!--<img src="assets/images/genral.jpg" alt="" class="img-fluid">-->
+                    <!--</div>-->
+                    <!--<div class="content-area">-->
+                        <!--<div class="doctor-name text-center">-->
+                            <!--<h3>Dr. Sadhna Diwedi</h3>-->
+                            <!--<h6>General Physician</h6>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="text-center"> <a href="appointment" class="template-btn mt-3">take appointment</a></div>-->
+                        <!--<br>-->
+                        <!--<br>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-sm-6">-->
+                <!--<div class="single-doctor mb-4 mb-sm-0">-->
+                    <!--<div class="doctor-img">-->
+                        <!--<img src="assets/images/neuro.png" alt="" class="img-fluid">-->
+                    <!--</div>-->
+                    <!--<div class="content-area">-->
+                        <!--<div class="doctor-name text-center">-->
+                            <!--<h3>Dr. Pushkar Nigam</h3>-->
+                            <!--<h6>Neuro Physician</h6>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="text-center"> <a href="appointment" class="template-btn mt-3">take appointment</a></div>-->
+                        <!--<br>-->
+                        <!--<br>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-sm-6">-->
+                <!--<div class="single-doctor">-->
+                    <!--<div class="doctor-img">-->
+                        <!--<img src="assets/images/ayurvedic.png" alt="" class="img-fluid">-->
+                    <!--</div>-->
+                    <!--<div class="content-area">-->
+                        <!--<div class="doctor-name text-center">-->
+                            <!--<h3>Dr. Sanjay Baranwal</h3>-->
+                            <!--<h6>Ayurvedic</h6>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="text-center"> <a href="appointment" class="template-btn mt-3">take appointment</a></div>-->
+                        <!--<br>-->
+                        <!--<br>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+        <!--<div class="row">-->
+            <!--<br>-->
+            <!--<br>-->
+            <!--<br>-->
+            <!--<br>-->
+            <!--<br>-->
+            <!--<div class="col-lg-6 offset-lg-3">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-lg-3 col-sm-6">-->
+                <!--<div class="single-doctor mb-4 mb-lg-0">-->
+                    <!--<div class="doctor-img">-->
+                        <!--<img src="assets/images/orthopedics.jpg" alt="" class="img-fluid">-->
+                    <!--</div>-->
+                    <!--<div class="content-area">-->
+                        <!--<div class="doctor-name text-center">-->
+                            <!--<h3>Dr. Avinash Jaiswal</h3>-->
+                            <!--<h6>Orthopedic</h6>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="text-center"> <a href="appointment" class="template-btn mt-3">take appointment</a></div>-->
+                        <!--<br>-->
+                        <!--<br>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-sm-6">-->
+                <!--<div class="single-doctor mb-4 mb-lg-0">-->
+                    <!--<div class="doctor-img">-->
+                        <!--<img src="assets/images/eye.jpg" alt="" class="img-fluid">-->
+                    <!--</div>-->
+                    <!--<div class="content-area">-->
+                        <!--<div class="doctor-name text-center">-->
+                            <!--<h3>Dr. Alka</h3>-->
+                            <!--<h6>Eye Specialist</h6>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="text-center"> <a href="appointment" class="template-btn mt-3">take appointment</a></div>-->
+                        <!--<br>-->
+                        <!--<br>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-sm-6">-->
+                <!--<div class="single-doctor mb-4 mb-sm-0">-->
+                    <!--<div class="doctor-img">-->
+                        <!--<img src="assets/images/homopethic.jpg" alt="" class="img-fluid">-->
+                    <!--</div>-->
+                    <!--<div class="content-area">-->
+                        <!--<div class="doctor-name text-center">-->
+                            <!--<h3>Dr. Seema Gupta</h3>-->
+                            <!--<h6>Homopethic</h6>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="text-center"> <a href="appointment" class="template-btn mt-3">take appointment</a></div>-->
+                        <!--<br>-->
+                        <!--<br>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-sm-6">-->
+                <!--<div class="single-doctor">-->
+                    <!--<div class="doctor-img">-->
+                        <!--<img src="assets/images/physio.jpg" alt="" class="img-fluid">-->
+                    <!--</div>-->
+
+                    <!--<div class="content-area">-->
+                        <!--<div class="doctor-name text-center">-->
+                            <!--<h3>Dr. Chaudhari Mohd Soahib</h3>-->
+                            <!--<h6>Physiotherapist</h6>-->
+                        <!--</div>-->
+                        <!--<br>-->
+                        <!--<div class="text-center"> <a href="appointment" class="template-btn mt-3">take appointment</a></div>-->
+                        <!--<br>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+    <!--</div>-->
+<!--</section>-->
+<!--&lt;!&ndash; Specialist Area Starts &ndash;&gt;-->
+
+
+
+
+
+
+
+<!-- footer starts here -->
+<footer class="footer clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 footer-para">
+                <p>&copy;MNNIT Dispensary All right reserved</p>
+            </div>
+            <div>
+                <p align="right"> Web Administrtor</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Javascript -->
+<!--<script src="assets/js/vendor/jquery-2.2.4.min.js"></script>-->
+<!--<script src="assets/js/vendor/bootstrap-4.1.3.min.js"></script>-->
+<!--<script src="assets/js/vendor/wow.min.js"></script>-->
+<!--<script src="assets/js/vendor/owl-carousel.min.js"></script>-->
+<!--<script src="assets/js/vendor/jquery.datetimepicker.full.min.js"></script>-->
+<!--<script src="assets/js/vendor/jquery.nice-select.min.js"></script>-->
+<!--<script src="assets/js/vendor/superfish.min.js"></script>-->
+<!--<script src="public/js/main.js"></script>-->
+
+
+</body>
+</html>

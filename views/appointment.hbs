@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="">
+    <title>Book Appointment</title>
+    <link  rel="stylesheet" href="css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">    error line-->
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,800,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=BenchNine:300,400,700' rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+    <!--<script src="js/modernizr.js"></script>-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>-->
+    <!--<![endif]&ndash;&gt;-->
+
+</head>
+<body>
+
+<header class="top-header">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <!--<a class="navbar-brand" href="#">Navbar</a>-->
+        <div class="col-xs-5 header-logo" style="margin-left:5%">
+            <br>
+            <a href="index.html"><img src="img/logo.png" alt="" class="img-responsive logo"></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 20%">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" style="background-color:#f44336;color:white;padding: 15px 25px; font-size:15px;text-align: center;display: inline-block"  >Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="medi" style="background-color:#f44336;color:white;padding: 15px 25px; font-size:15px;text-align: center;display: inline-block"  >Medicine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="insurance" style="background-color:#f44336;color:white;padding: 15px 25px; font-size:15px;text-align: center;display: inline-block" >Insurance Service</a>
+                </li> <li class="nav-item">
+                <a class="nav-link" href="appointment" style="background-color:#f44336;color:white;padding: 15px 25px; font-size:15px;text-align: center;display: inline-block" >Online Appointment</a>
+            </li>
+
+            </ul>
+        </div>
+    </nav>
+</header>
+<!--<header class="header trans_400">-->
+    <!--<div class="header_content d-flex flex-row align-items-center jusity-content-start trans_400">-->
+
+        <!--&lt;!&ndash; Logo &ndash;&gt;-->
+        <!--<div class="logo">-->
+            <!--<a href="index.html"><img src="img/logo.png" alt="" class="img-responsive logo"></a>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; Main Navigation &ndash;&gt;-->
+        <!--<nav class="main_nav">-->
+            <!--<ul class="d-flex flex-row align-items-center justify-content-start">-->
+                <!--<li class="active"><a href="index.html">Home</a></li>-->
+                <!--<li><a href="medi">Medicines</a></li>-->
+                <!--<li><a href="services.html">Insurance Services</a></li>-->
+                <!--<li><a href="appointment">Online Appointment</li>-->
+
+            <!--</ul>-->
+        <!--</nav>-->
+
+    <!--</div>-->
+<!--</header>-->
+
+
+<!-- Intro -->
+<br>
+<br><br>
+<div class="intro">
+    <div class="container">
+        <div class="row">
+
+            <!-- Intro Content -->
+            <div class="col-lg-6 intro_col">
+                <div class="intro_content">
+                    <div class="section_title_container">
+                        <div class="section_title"><h2 style="font-size:30px;">Book Your Appointment</h2></div>
+                    </div>
+                    <div class="intro_text">
+                        <p>MNNIT Health and Care portal provides convenient, online Appointments for MNNIT Students and Faculty. This service allows Students and Faculty to Book Appointment for estimated treatment. Students have to filled all the fields first and then submit their result. If their appointment book successfully then students will get the confirmation on the provided Email Id.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Intro Form -->
+            <br>
+            <br>
+            <div class="col-lg-6 intro_col">
+                <div class="intro_form_container">
+                    <div class="intro_form_title">Make an Appointment</div>
+                    <h6 style="color:red;">*All Fields are Mandatory</h6>
+                    <form  class="intro_form" id="intro_form" action="/appointment/book" method="post">
+                        <div class="d-flex flex-row align-items-start justify-content-between flex-wrap">
+                            <input type="text" class="intro_input" name="fname" placeholder="Your First Name" pattern="[A-Za-z]+" required="required">
+                            <input type="text" class="intro_input" name="lname" placeholder="Your Last Name" pattern="[A-Za-z]+" required="required">
+                            <select class="intro_select intro_input" name="doctor" required="required">
+                                <option disabled="" selected="" value="">Select Doctor</option>
+                                <option>Dr.Nishant Nigam</option>
+                                <option>Dr.Shailandra Kumar</option>
+                                <option>Dr.Puneet Upadhaya</option>
+                                <option>Dr.Alka</option>
+                                <option>Dr.Avinash Jaiswal</option>
+                                <option>Dr.Seema Gupta</option>
+
+
+                            </select>
+
+                                <select class="intro_select intro_input" name="dtype" required="required">
+                                    <option disabled="" selected="" value="">Specialization</option>
+                                    <option>Neurosurgeon</option>
+                                    <option>Physician</option>
+                                    <option>Gynacologist</option>
+                                    <option>E.N.T</option>
+
+                                </select>
+                            <input type="date" id="datepicker" name="date" class="intro_input datepicker" placeholder="Date" required="required">
+                                <select class="intro_select intro_input" name="time" required="required">
+                                    <option disabled="" selected="" value="">Timing</option>
+                                    <option>12: P.M. to 1:00 P.M.</option>
+                                    <option>1: P.M. to 2:00 P.M.</option>
+                                    <option>2: P.M. to 3:00 P.M.</option>
+                                    <option>3: P.M. to 4:00 P.M.</option>
+                                    <option>4: P.M. to 5:00 P.M.5</option>
+                                </select>
+                            <input type="text" class="intro_input" name="reg" placeholder="Your Registration-No" pattern="[a-z0-9]+"  minlength="4" maxlength="10" required="required">
+                            <input type="email" class="intro_input" name="email" placeholder="Your E-mail" required="required" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$"autocomplete="off">
+                        </div>
+                        <button class="button button_1 intro_button trans_200">make an appointment</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- footer starts here -->
+
+<div class="footer_bar">
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="footer_bar_content  d-flex flex-md-row flex-column align-items-md-center justify-content-start">
+                    <div class="copyright">
+                        &copy;MNNIT Dispensary All rights reserved
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+</div>
+
+<!-- script tags
+=============================================================
+<script src="js/jquery-2.1.1.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="js/gmaps.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>-->
+</body>
+</html>
